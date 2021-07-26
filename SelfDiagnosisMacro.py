@@ -18,8 +18,6 @@ Password = "1234" #비밀번호
 
 subprocess.Popen(chromePath + ' --remote-debugging-port=9222 --user-data-dir="' + chromeTemp + '" https://hcs.eduro.go.kr/#/loginHome')
 option = Options()
-option.add_argument("headless")
-option.add_argument("window-size=1920x1080")
 option.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
 driver = webdriver.Chrome(webdriverPath, options=option)
 
