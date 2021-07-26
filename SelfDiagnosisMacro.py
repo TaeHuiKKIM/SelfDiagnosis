@@ -1,3 +1,4 @@
+import shutil
 import subprocess
 from time import sleep
 from selenium import webdriver
@@ -15,8 +16,17 @@ UserName = "김카힐"
 BirthDate = "000000"
 Password = "1234"
 
+'''
+try:
+    shutil.rmtree(chromeTemp)
+except FileNotFoundError:
+    pass
+'''
+
 subprocess.Popen(chromePath + ' --remote-debugging-port=9222 --user-data-dir="' + chromeTemp + '" https://hcs.eduro.go.kr/#/loginHome')
 option = Options()
+options.add_argument("headless")
+options.add_argument("window-size=1920x1080")
 option.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
 driver = webdriver.Chrome(webdriverPath, options=option)
 
