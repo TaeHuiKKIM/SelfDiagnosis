@@ -9,12 +9,12 @@ chromeTemp = 'C:/chrometemp' #디버거 크롬의 쿠키, 캐시 파일 등이 �
 chromePath = 'C:/Program Files/Google/Chrome/Application/chrome.exe' #chrome.exe의 경로
 webdriverPath = 'C:/chromedriver.exe' #chromedriver.exe의 경로
 
-CityProvince = "공학도" #시/도
-SchoolLevel = "중학교" #학교급
-SchoolName = "코딩중학교" #학교 이름
-UserName = "김카힐" #이름
-BirthDate = "000000" #생년월일
-Password = "1234" #비밀번호
+CityProvince = "경상남도" #시/도
+SchoolLevel = "고등학교" #학교급
+SchoolName = "거창대성고등학교" #학교 이름
+UserName = "김태희" #이름
+BirthDate = "030418" #생년월일
+Password = "1043" #비밀번호
 
 subprocess.Popen(chromePath + ' --remote-debugging-port=9222 --user-data-dir="' + chromeTemp + '" https://hcs.eduro.go.kr/#/loginHome')
 option = Options()
